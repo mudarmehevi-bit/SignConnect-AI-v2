@@ -262,6 +262,9 @@ threading.Thread(
 # ============================================================
 # START SERVER
 # ============================================================
+# Start AI worker when Render imports the application
+if __name__ != "__main__":
+    inference_worker.start()
 
 if __name__ == "__main__":
 
